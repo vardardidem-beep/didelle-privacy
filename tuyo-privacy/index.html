@@ -8,20 +8,68 @@
 <body>
   <main>
     <h1>Tuyo YouTube Publisher Privacy Notice</h1>
-    <p>Effective date: September 22, 2026</p>
-    <p>This notice applies to the H02C Tuyo YouTube Publisher, operated by DIDELLE for the Tuyo YouTube channel.</p>
-    <h2>Google and YouTube data we access</h2>
-    <p>When an authorized channel manager connects the application, it may access the connected YouTube channel identity and basic channel metadata to verify the intended channel, plus the OAuth credentials needed to perform the requested YouTube action. The application requests only the YouTube scopes needed to verify the channel and upload videos when instructed by an authorized manager.</p>
-    <h2>How we use data</h2>
-    <p>We use this data only to authenticate the authorized connection, confirm the connected channel is Tuyo, and perform an explicitly requested YouTube publishing action. We do not sell Google or YouTube user data, use it for advertising, or use it for unrelated profiling.</p>
-    <h2>Storage, sharing, and retention</h2>
-    <p>OAuth credentials are stored only in the authorized publisher runtime, not on this website. They are not shared with third parties except where required to provide the requested Google or YouTube service. Credentials are retained only while needed for the authorized connection and can be removed or revoked at any time.</p>
-    <h2>Your controls</h2>
-    <p>You may revoke the application's access through your Google Account security settings or request removal of the locally stored connection. Revoking access prevents further use of the connection until you authorize it again.</p>
-    <h2>Google API Services</h2>
-    <p>Use of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</p>
-    <h2>Contact</h2>
-    <p>For privacy questions, contact DIDELLE via <a href="https://x.com/didelleshop">@didelleshop on X</a>.</p>
+    <p>Last updated: October 9, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>TUYO Learning operates a YouTube content management tool used by authorized channel managers. This Privacy Notice explains how the application accesses, uses, stores, protects, retains, and deletes Google user data.</p>
+    <p>The application is intended for authorized adult channel managers. Although TUYO Learning publishes educational content for children, children are not intended to use the OAuth management tool.</p>
+
+    <h2>2. Google User Data We Access</h2>
+    <p>The application requests the following Google OAuth permissions:</p>
+    <ul>
+      <li><strong>youtube.readonly:</strong> To identify and verify the authorized YouTube channel and retrieve channel information, including its channel ID, title, and handle.</li>
+      <li><strong>youtube.upload:</strong> To upload videos to the authorized YouTube channel when expressly approved by the channel manager.</li>
+      <li><strong>youtube.force-ssl:</strong> To perform authorized YouTube content-management operations, including explicitly approved changes to video privacy settings.</li>
+    </ul>
+    <p>The application verifies that the connected account belongs to the authorized TUYO Learning YouTube channel.</p>
+    <p>The H02C application does not currently request or use YouTube Analytics or YouTube Analytics Monetary scopes.</p>
+
+    <h2>3. How We Use Google User Data</h2>
+    <p>Google user data is used exclusively to:</p>
+    <ul>
+      <li>Authenticate and verify the authorized YouTube channel.</li>
+      <li>Perform channel-management operations authorized by the channel manager.</li>
+      <li>Upload approved videos with private visibility by default.</li>
+      <li>Support explicitly authorized video-management operations.</li>
+    </ul>
+    <p>The application does not automatically publish videos publicly.</p>
+    <p>Google user data is not sold, used for advertising, or shared with advertisers.</p>
+
+    <h2>4. Data Storage and Security</h2>
+    <p>OAuth credentials are stored locally in the H02C <code>.credentials/</code> directory. The directory is owned by the authorized macOS account (<code>akidesekeri:staff</code>) and uses filesystem mode <code>0700</code>; the TUYO OAuth token file uses owner-only filesystem mode <code>0600</code>.</p>
+    <p>Credentials are excluded from source-code version control and are not intentionally printed in application logs.</p>
+    <p>Access is restricted through local operating-system permissions. The current implementation does not claim separately verified encryption at rest.</p>
+    <p>Credential rotation and revocation are handled manually by an authorized operator.</p>
+
+    <h2>5. Data Retention</h2>
+    <p>OAuth credentials are retained while the authorized YouTube connection is required for channel-management operations.</p>
+    <p>The current implementation does not enforce a fixed automatic deletion period. Credentials remain stored until removed by an authorized operator or through an applicable credential-management process.</p>
+    <p>Access tokens may expire. Expiration does not necessarily delete locally stored credentials.</p>
+
+    <h2>6. Data Deletion and Revocation</h2>
+    <p>Users can revoke the application's Google Account access at:</p>
+    <p><a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a></p>
+    <p>Users may also request deletion of locally stored OAuth credentials through the application's authorized operator.</p>
+    <p>Local credential deletion is currently performed manually. The application does not provide an automated deletion endpoint.</p>
+    <p>Revoking Google access prevents further authorized API access using the revoked grant, but does not automatically remove previously stored local credential files.</p>
+
+    <h2>7. Data Sharing and Limited Use</h2>
+    <p>Google user data is used only for the functionality described in this notice.</p>
+    <p>The application does not sell Google user data or share it with third parties for advertising purposes.</p>
+    <p>The application's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>TUYO Learning produces educational YouTube content intended for children.</p>
+    <p>The YouTube OAuth management application is operated by authorized adult channel managers and is not intended to collect Google Account information from children.</p>
+    <p>The application does not provide children with an OAuth login or channel-management interface.</p>
+
+    <h2>9. Changes to This Privacy Notice</h2>
+    <p>This Privacy Notice may be updated when application functionality, data-handling practices, or applicable requirements change.</p>
+    <p>Updates will be published at the existing TUYO Learning Privacy Notice URL.</p>
+
+    <h2>10. Contact and Privacy Requests</h2>
+    <p>For privacy inquiries, Google data access questions, revocation assistance, or requests concerning locally stored credentials, contact TUYO Learning at <a href="mailto:didelleshop@gmail.com">didelleshop@gmail.com</a>.</p>
+
     <p><a href="/tuyo-terms/">Tuyo Terms of Use</a></p>
   </main>
 </body>
